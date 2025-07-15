@@ -6,6 +6,8 @@ import SystemBootScroll from './SystemBootScroll';
 import ThemeAwareText from './ThemeAwareText';
 import ThemeAwareButton from './ThemeAwareButton';
 
+const RESUME_URL = 'https://drive.google.com/file/d/1y-lMUZ0k-Ph0C4gQU3X-olBuAlPXLvbR/view?usp=sharing';
+
 export default function HeroSection() {
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
@@ -87,7 +89,9 @@ export default function HeroSection() {
 
             <ThemeAwareButton
               variant="secondary"
-              onClick={() => scrollToSection('contact')}
+              href={RESUME_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-lg"
             >
               📄 Download Resume
