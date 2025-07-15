@@ -30,6 +30,10 @@ module.exports = {
         'border-dark': 'rgba(255, 255, 255, 0.1)',
         'border-light': 'rgba(0, 0, 0, 0.05)',
         'border-hacker': 'rgba(0, 255, 64, 0.2)',
+        'pill-bg': 'rgba(255, 255, 255, 0.05)',
+        'pill-border': 'rgba(255, 255, 255, 0.1)',
+        'pill-hover': 'rgba(0, 255, 64, 0.3)',
+        'hacker-glow': 'rgba(0, 255, 64, 0.15)',
       },
       fontFamily: {
         'orbitron': ['Orbitron', 'monospace'],
