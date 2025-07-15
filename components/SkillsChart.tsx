@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useTheme } from './ThemeProvider';
 import ThemeAwareText from './ThemeAwareText';
+import SkillPill from './SkillPill';
 
 const skills = [
   { name: 'Telegram Bots', level: 95, icon: '🤖' },
@@ -118,12 +119,21 @@ export default function SkillsChart() {
               <h3 className="text-2xl font-rajdhani font-bold mb-4">
                 <ThemeAwareText variant="accent">🚀 Continuous Evolution</ThemeAwareText>
               </h3>
-              <p className="max-w-3xl mx-auto leading-relaxed">
+              <p className="max-w-3xl mx-auto leading-relaxed mb-6">
                 <ThemeAwareText variant="secondary">
                   From pharmaceutical quality systems to cutting-edge AI development, 
                   always learning, always building, always innovating.
                 </ThemeAwareText>
               </p>
+              
+              <div className="flex flex-wrap gap-2 justify-center">
+                <SkillPill emoji="💻">Full Stack</SkillPill>
+                <SkillPill emoji="🤖">AI/ML</SkillPill>
+                <SkillPill emoji="☁️">Cloud Computing</SkillPill>
+                <SkillPill emoji="⚡">Automation</SkillPill>
+                <SkillPill emoji="📱">Mobile Dev</SkillPill>
+                <SkillPill emoji="🔧">DevOps</SkillPill>
+              </div>
             </div>
           </motion.div>
         </motion.div>
