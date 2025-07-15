@@ -121,5 +121,4 @@ export default function HireMeSystem() {
     </section>
   );
 }
-  );
-}
+
