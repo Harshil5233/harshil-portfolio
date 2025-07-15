@@ -35,7 +35,7 @@ export default function SkillsChart() {
             <h2 className="text-4xl md:text-6xl font-orbitron font-bold text-glow mb-4">
               Technical Arsenal
             </h2>
-            <div className={`w-24 h-1 mx-auto mb-6 ${theme === 'light' ? 'bg-aqua-accent' : 'bg-neon-cyan'}`}></div>
+            <div className={`w-24 h-1 mx-auto mb-6 ${theme === 'hacker' ? 'bg-hacker-green' : 'bg-neon-cyan'}`}></div>
             <p className="text-lg max-w-3xl mx-auto">
               <ThemeAwareText variant="secondary">
                 Skills developed through real-world projects, certifications, and professional experience
@@ -66,14 +66,14 @@ export default function SkillsChart() {
 
                 <div className="relative">
                   <div className={`w-full h-3 rounded-full border overflow-hidden ${
-                    theme === 'light' 
-                      ? 'bg-gray-200 border-border-light' 
+                    theme === 'hacker' 
+                      ? 'bg-hacker-card border-border-hacker' 
                       : 'bg-space-dark border-border-dark'
                   }`}>
                     <motion.div
                       className={`h-full rounded-full relative ${
-                        theme === 'light'
-                          ? 'bg-gradient-to-r from-aqua-accent to-blue-gradient'
+                        theme === 'hacker'
+                          ? 'bg-gradient-to-r from-hacker-green to-hacker-accent'
                           : 'bg-gradient-to-r from-neon-cyan to-pink-cta'
                       }`}
                       initial={{ width: 0 }}
@@ -90,8 +90,8 @@ export default function SkillsChart() {
                   
                   <motion.div
                     className={`absolute top-0 h-3 w-1 rounded-full shadow-lg ${
-                      theme === 'light'
-                        ? 'bg-aqua-accent shadow-aqua-accent/50'
+                      theme === 'hacker'
+                        ? 'bg-hacker-green shadow-hacker-green/50'
                         : 'bg-neon-cyan shadow-neon-cyan/50'
                     }`}
                     initial={{ left: 0 }}
