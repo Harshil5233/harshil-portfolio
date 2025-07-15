@@ -3,9 +3,6 @@ const nextConfig = {
   images: {
     domains: ['github.com', 'raw.githubusercontent.com'],
   },
-}
+};
 
-module.exports = nextConfig
-}
-
-module.exports = nextConfig
+module.exports = nextConfig;
