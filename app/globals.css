@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark {
+  background: #0E0F1B;
+  color: #E0F7FA;
+}
+
+.hacker {
+  background: #0B0F0C;
+  color: #C9FCD4;
+  font-family: 'Source Code Pro', monospace;
+}
+
+/* Theme-Aware Cursor */
+.dark .cursor {
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.8), transparent);
+}
+
+.light .cursor {
+  background: radial-gradient(circle, rgba(0, 188, 212, 0.6), transparent);
+}
+
+.cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0.1s ease;
+  mix-blend-mode: screen;
+}
+
+.dark .cursor-trail {
+  background: rgba(0, 255, 255, 0.4);
+}
+
+.light .cursor-trail {
+  background: rgba(0, 188, 212, 0.3);
+}
+
+.cursor-trail {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+.cursor-trail {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(0, 255, 255, 0.6);
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #00FFFF, #B300FF);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #B300FF, #00FFFF);
+}
+
+/* Theme-Aware Glass System */
+.dark .glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.hacker .glass {
+  background: rgba(0, 255, 64, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 255, 64, 0.2);
+  box-shadow: 0 0 10px rgba(0, 255, 64, 0.1);
+  transition: all 0.3s ease;
+}
+
+.dark .glass:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(0, 255, 255, 0.4);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+}
+
+.hacker .glass:hover {
+  background: rgba(0, 255, 64, 0.1);
+  border-color: rgba(0, 255, 65, 0.6);
+  box-shadow: 0 0 20px rgba(0, 255, 64, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Theme-Aware Glow System */
+.dark .neon-glow {
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.hacker .neon-glow {
+  box-shadow: 0 0 16px rgba(0, 255, 64, 0.4), 0 4px 12px rgba(0, 255, 64, 0.2);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.dark .text-glow {
+  color: #E0F7FA;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+.hacker .text-glow {
+  color: #C9FCD4;
+  text-shadow: 0 0 10px rgba(0, 255, 64, 0.6);
+  font-family: 'Orbitron', monospace;
+}
+
+/* Hacker Theme Button Glow */
+.hacker .btn-glow {
+  background: linear-gradient(135deg, #142D14, #00FF41);
+  box-shadow: 0 4px 16px rgba(0, 255, 64, 0.3);
+  color: #0B0F0C;
+  border: 1px solid rgba(0, 255, 64, 0.4);
+}
+
+.hacker .btn-glow:hover {
+  box-shadow: 0 8px 24px rgba(0, 255, 64, 0.5), 0 0 20px rgba(0, 255, 64, 0.4);
+  transform: translateY(-2px) scale(1.02);
+  background: #00FF41;
+}
+
+/* Theme-Aware Hover Effects */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.3);
+}
+
+.hacker .hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 255, 64, 0.3);
+}
+
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.dark .hover-glow:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  transform: scale(1.05);
+}
+
+.hacker .hover-glow:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 64, 0.6);
+  transform: scale(1.05);
+}
+
+/* Hide scrollbar for smooth sections */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cinematic Background */
+.cinematic-bg {
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.cinematic-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 64, 129, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Theme-Aware Particles */
+.dark .particles {
+  background-image: 
+    radial-gradient(2px 2px at 30px 40px, rgba(0, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 70px 80px, rgba(255, 64, 129, 0.3), transparent),
+    radial-gradient(1px 1px at 90px 20px, rgba(0, 255, 255, 0.2), transparent);
+  opacity: 0.5;
+}
+
+.hacker .particles {
+  background-image: 
+    radial-gradient(3px 3px at 25px 35px, rgba(0, 255, 64, 0.3), transparent),
+    radial-gradient(2px 2px at 65px 75px, rgba(0, 255, 64, 0.2), transparent),
+    radial-gradient(1px 1px at 85px 25px, rgba(0, 255, 64, 0.15), transparent);
+  opacity: 0.6;
+}
+
+/* Hacker Theme Background Override */
+.hacker .cinematic-bg {
+  background: #0B0F0C;
+}
+
+.hacker .cinematic-bg::before {
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(0, 255, 64, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(0, 255, 64, 0.06) 0%, transparent 50%);
+  opacity: 0.8;
+}
+
+/* Hacker Terminal Effects */
+.hacker .terminal-cursor::after {
+  content: '_';
+  animation: blink 1s infinite;
+  color: #00FF41;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: repeat;
+  background-size: 120px 120px;
+  animation: float 25s linear infinite;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-toggle:hover {
+  transform: rotate(180deg) scale(1.1);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+/* 3D Flip Card Effects */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.rotate-y-0 {
+  transform: rotateY(0deg);
+}
+
+/* Console Easter Egg */
+.console-message {
+  display: none;
+}
