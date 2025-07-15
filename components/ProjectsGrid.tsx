@@ -11,7 +11,7 @@ const projects = [
     title: 'Cinematic Portfolio OS',
     description: 'My own portfolio built as a cinematic single-page app with dark/light theme toggle, animated sections, and Vercel deployment.',
     tech: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
-    link: 'https://harshil-portfolio.vercel.app',
+    link: 'https://harshil-portfolio-green.vercel.app/',
     icon: '🚀',
     type: 'Web App'
   },
