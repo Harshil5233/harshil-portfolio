@@ -153,6 +153,5 @@ export default function ProjectsGrid() {
         </motion.div>
       </div>
     </section>
-  );
-}
 
+}
