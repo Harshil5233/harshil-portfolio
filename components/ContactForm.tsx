@@ -5,6 +5,8 @@ import { useInView } from 'react-intersection-observer';
 import ThemeAwareText from './ThemeAwareText';
 import ThemeAwareButton from './ThemeAwareButton';
 
+const RESUME_URL = 'https://drive.google.com/file/d/1y-lMUZ0k-Ph0C4gQU3X-olBuAlPXLvbR/view?usp=sharing';
+
 const contactInfo = [
   {
     icon: '📧',
@@ -150,6 +152,14 @@ export default function ContactForm() {
                   rel="noopener noreferrer"
                 >
                   💼 Connect on LinkedIn
+                </ThemeAwareButton>
+                <ThemeAwareButton
+                  variant="secondary"
+                  href={RESUME_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  📄 Download Resume
                 </ThemeAwareButton>
               </div>
             </div>
