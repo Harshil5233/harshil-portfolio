@@ -12,9 +12,7 @@ export default function HireMeSystem() {
   };
 
   const downloadResume = () => {
-    // In production, this would download the actual PDF
-    console.log('Downloading resume...');
-    alert('Resume download would be implemented here');
+    window.open('https://drive.google.com/file/d/1y-lMUZ0k-Ph0C4gQU3X-olBuAlPXLvbR/view?usp=sharing', '_blank');
   };
 
   return (
@@ -121,5 +119,7 @@ export default function HireMeSystem() {
         </motion.div>
       </div>
     </section>
+  );
+}
   );
 }
