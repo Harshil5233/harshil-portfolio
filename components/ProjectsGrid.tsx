@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import ThemeAwareText from './ThemeAwareText';
 import ThemeAwareButton from './ThemeAwareButton';
+import SkillPill from './SkillPill';
 
 const projects = [
   {
@@ -97,12 +98,9 @@ export default function ProjectsGrid() {
 
                     <div className="flex flex-wrap gap-2 mb-6">
                       {project.tech.map((tech, techIndex) => (
-                        <span
-                          key={techIndex}
-                          className="px-3 py-1 text-xs bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark rounded-full font-medium"
-                        >
-                          <ThemeAwareText variant="accent">{tech}</ThemeAwareText>
-                        </span>
+                        <SkillPill key={techIndex}>
+                          {tech}
+                        </SkillPill>
                       ))}
                     </div>
 
@@ -155,5 +153,7 @@ export default function ProjectsGrid() {
         </motion.div>
       </div>
     </section>
+  );
+}
   );
 }
